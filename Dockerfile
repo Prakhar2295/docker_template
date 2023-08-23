@@ -8,7 +8,17 @@ RUN mkdir /opt/app
 WORKDIR /opt/app
 
 
-COPY . /opt/app
+COPY . .
 
-CMD ["python3","app.py"]
+#ENTRYPOINT FLASK_APP = app.py flask run --host 0.0.0.0
+
+#CMD ["python3","app.py"]
+
+#ENTRYPOINT [ "python3","app.py" ]
+ENTRYPOINT [ "python3"]
+
+CMD [ "app.py" ]
+
+
+
 
